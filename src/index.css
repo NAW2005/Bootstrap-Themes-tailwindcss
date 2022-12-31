@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.glass{
+    backdrop-filter: blur(5px);    
+    box-shadow: 0 1rem 3rem rgb(29 58 83 / 15%) !important
+}
+
+.tour-bg{
+    background: url('https://booking.webestica.com/assets/images/bg/02.jpg');
+    background-size: cover;
+}
+
+.container-cus{
+    @apply xl:px-0 lg:px-[20px] sm:px-[25px] px-[15px] xl:w-[80%] md:w-[95%] w-full;
+}
+
+.profile-img{
+    @apply text-[14.5px] bg-secondary dark:bg-[#363636] dark:text-white text-[#444242] rounded-[10px] sm:w-[40px] sm:h-[40px] w-[32px] h-[32px] flex items-center justify-center relative;
+}
+
+.noti-ball{
+    @apply after:absolute after:top-0 after:right-[-2px] after:w-[10px] after:h-[10px] after:rounded-full after:bg-red-600
+}
+
+.noti-ball::after{
+    animation: fade 2s infinite linear;
+}
+
+.carousel-btn{
+    @apply absolute translate-x-[0%] duration-200 top-[50%] translate-y-[-50%] w-[45px] h-[45px] rounded-full flex items-center justify-center bg-black bg-opacity-[0.7] text-white z-[998];
+ }
+
+  
+
+@keyframes fade {
+    0%{
+        opacity: 1;
+    }
+
+    50%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+
+.card{
+    transition: 10000s !important;
+}
+
+.flight{
+    background: url('https://booking.webestica.com/assets/images/bg/01.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.switch.active{
+    background: black !important;
+    color: white !important;
+}
+
+.toCenter{
+    @apply flex justify-center items-center
+}
+
+.title{
+    @apply sm:text-[48px] text-[30px] font-bold text-center 
+}
+
+.btn-secondary{
+    @apply bg-secondary dark:bg-primary dark:bg-opacity-[0.1] text-primary space-x-[8px] px-[12px] py-[8px] rounded-[7px] text-[16px] font-[500]
+}
